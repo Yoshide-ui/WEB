@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .note {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="process_order.php" method="POST">
+        <h2>Order Your Crochet Design</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="heard">Where did you hear about us?</label>
+        <input type="text" id="heard" name="heard">
+
+        <label for="yarn">What kind of yarn?</label>
+        <select id="yarn" name="yarn">
+            <option value="Fluffy">Fluffy</option>
+            <option value="Normal">Normal</option>
+            <option value="Thick">Thick</option>
+        </select>
+
+        <label for="custom">Custom or Pre-made Template?</label>
+        <select id="custom" name="custom">
+            <option value="Custom">Custom</option>
+            <option value="Pre-made">Pre-made</option>
+        </select>
+
+        <div id="custom-details">
+            <label for="size">If custom, what size?</label>
+            <select id="size" name="size">
+                <option value="Palm-sized">Palm-sized</option>
+                <option value="Forearm-sized">Forearm-sized</option>
+            </select>
+        </div>
+
+        <div id="pre-made-details">
+            <label for="design">If pre-made, what design?</label>
+            <select id="design" name="design" multiple>
+                <option value="Design1">Design 1</option>
+                <option value="Design2">Design 2</option>
+                <option value="Design3">Design 3</option>
+                <option value="Design4">Design 4</option>
+                <option value="Design5">Design 5</option>
+                <option value="Design6">Design 6</option>
+                <option value="Design7">Design 7</option>
+                <option value="Design8">Design 8</option>
+                <option value="Design9">Design 9</option>
+                <option value="Design10">Design 10</option>
+            </select>
+        </div>
+
+        <label for="time">Preferred Receiving Time:</label>
+        <input type="date" id="time" name="time">
+        <p class="note">* Note: We're not robots; these deadlines may shift based on complexity.</p>
+
+        <button type="submit">Submit Order</button>
+        <p>Thank you for choosing us for your crochet needs!</p>
+    </form>
+</body>
+</html>
